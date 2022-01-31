@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
- Route::middleware('auth_api')->get('/get_companies', [ApiController::class, 'getCompanies']);
- Route::get('/get_clients/{id}', [ApiController::class, 'getClients'])->middleware('auth:api');
- Route::get('/get_clients_companies/{id}', [ApiController::class, 'getClientCompanies'])->middleware('auth:api');
+ Route::get('/get_companies', [ApiController::class, 'getCompanies']);
+ Route::get('/get_clients/{id}', [ApiController::class, 'getClients']);
+ Route::get('/get_clients_companies/{id}', [ApiController::class, 'getClientCompanies']);
